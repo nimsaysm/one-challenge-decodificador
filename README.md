@@ -1,4 +1,6 @@
-
+<p align="center">
+    <img src="./github/preview.gif" alt="Demonstração do projeto" width="100%" />
+</p>
 
 
 # 💻 Proposta do desafio
