@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decodificador de Texto</title>
+    <link rel="icon" type="image/png" href="assets/imgs/logo.svg">
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body>
+    <header>
+        <img src="assets/imgs/logo.svg" alt="Logo" id="logo">
+        <div id="dev">
+            <a href="https://www.linkedin.com/in/yasmin-soraya/">Conheça o dev</a>
+            <a href="https://github.com/nimsaysm">Veja outros projetos</a>
+        </div>
+    </header>
+    <div id="texto-inicial">
+        <textarea id="input-texto" placeholder="Digite seu texto"></textarea>
+        <div id="alerta">
+            <img src="assets/imgs/exclamation.svg">
+            <p id="aviso-texto">Apenas letras maiúsculas e sem acento.</p>
+        </div>
+    </div>
+    <div id="botoes">
+        <button class="botao" id="criptografar-btn">Criptografar</button>
+        <button class="botao" id="descriptografar-btn">Descriptografar</button>
+    </div>
+    <div id="texto-final-area">
+        <div id="sem-resultado">
+            <img id="img-sem-mensagem" src="assets/imgs/img-mensagem-nao-encontrada.svg">
+            <h2 id="sem-mensagem">Nenhuma mensagem encontrada</h2>
+            <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
+        </div>
+        <p id="resultado"></p>
+        <button class="botao" id="copiar-resultado">Copiar</button>
+    </div>
+    <footer>
+        <p>Esse desafio foi desenvolvido durante o ONE, por <a href="https://www.linkedin.com/in/yasmin-soraya/">Yasmin
+                Soraya</a>.</p>
+    </footer>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

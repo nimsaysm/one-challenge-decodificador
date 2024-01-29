@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&family=Roboto:wght@500&display=swap');
+
+:root {
+    --lighter-purple: #E9ECF8;
+    --purple: #AAB2D5;
+    --dark-purple: #757FB2;
+    --darker-purple: #333b62;
+    --text-size: 1.8rem;
+    --font: 'Poppins', 'Roboto';
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: var(--font);
+    font-size: var(--text-size);
+    background-color: var(--lighter-purple);
+}
+
+header, div {
+    margin: 1rem;
+}
+
+header {
+    display: flex;
+    text-align: center;
+    margin-bottom: 5rem;
+    flex-direction: column;
+}
+
+header #logo {
+    width: 7rem;
+    margin-bottom: 2rem;
+}
+
+#dev a {
+    display: flex;
+    margin: 1rem;
+    color: var(--dark-purple);
+    text-decoration: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+#dev a:hover {
+    color: #333b62;
+}
+
+#input-texto {
+    width: 100%;
+    height: 40rem;
+    border: none;
+    font-family: var(--font);
+    font-size: 2.5rem;
+    text-align: justify;
+    outline: none;
+    color: var(--darker-purple);
+    line-height: 150%;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    resize: none;
+}
+
+#input-texto::placeholder {
+    color: var(--dark-purple);
+}
+
+#alerta {
+    display: flex;
+    color: #495057;
+}
+
+#aviso-texto {
+    margin-left: 1rem;
+}
+
+#botoes {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.botao {
+    display: flex;
+    width: 90%;
+    margin: 3rem 1rem;
+    padding: 2.4rem;
+    border-radius: 2.4rem;
+    border: 1px solid var(--darker-purple);
+    font-family: var(--font);
+    font-size: var(--text-size);
+    background-color: transparent;
+    color: var(--darker-purple);
+    gap: 0.8rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.botao:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+#criptografar-btn {
+    background-color: var(--darker-purple);
+    color: var(--lighter-purple);
+}
+
+#texto-final-area {
+    margin: 10rem 3rem 10rem 3rem;
+    padding: 5rem 0;
+    height: 100%;
+    padding: 3.2rem;
+    font-size: 2.2rem;
+    color: var(--darker-purple);
+    background-color: white;
+    border-radius: 3.2rem;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+#img-sem-mensagem {
+    display: none;
+}
+
+#sem-mensagem {
+    color: var(--Gray-gray-500, #343A40);
+    margin-bottom: 2rem;
+}
+
+#copiar-resultado {
+    display: none;
+}
+
+footer {
+    padding: 1rem;
+    margin-bottom: -10rem;
+    text-align: center;
+    color: white;
+    background-color: var(--darker-purple);
+}
+
+footer a {
+    color: var(--lighter-purple);
+    cursor: pointer;
+}
+
+@media screen and (min-width: 720px) and (max-width: 900px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #dev a {
+        display: inline-flex;
+        margin-left: 2rem;
+    }
+
+    #botoes {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    #texto-final-area .botao {
+        margin: 3rem 0 0 0;
+    }
+}
+
+@media screen and (min-width: 901px) {
+    body {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-areas: 
+        "header header"
+        "texto resultado"
+        "botoes resultado"
+        "footer footer";
+    }
+
+    header {
+        justify-content: space-between;
+        grid-area: header;
+        margin: 2rem;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #dev a {
+        display: inline-flex;
+        margin-left: 2rem;
+    }
+
+    #texto-inicial {
+        grid-area: texto;
+        margin: 2rem;
+    }
+
+    #botoes {
+        grid-area: botoes;
+        margin: 2rem;
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    #texto-final-area {
+        grid-area: resultado;
+        display: flex;
+        max-width: 50rem;
+        justify-items: center;
+        margin: 0 1rem 0 3rem;
+        padding: 5rem 2rem;
+    }
+
+    #img-sem-mensagem {
+        display: flex;
+    }
+
+    footer {
+        grid-area: footer;
+        margin-top: 10rem;
+    }
+}
